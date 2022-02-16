@@ -30,19 +30,22 @@ function App() {
         .then( (data) => {
           setPlaces( data?.filter( (place) => place.name && place.num_reviews >0 )); 
           setIsLoading(false);
+          console.log(places)
         })
       
-    }, [coordinates, bounds, type] 
+    }, [coordinates, bounds, type]
   );
 
   useEffect( () => {
     const filtered_places = (rating !== 0) ? places?.filter( single_place => Number(single_place.rating) >= rating)  : places;
     setFilteredPlaces(filtered_places);
+    setChildClicked('');
   }, [places, rating])
 
   useEffect(() => {
-    (sortby === 'sort-by-popularity') ? places?.sort( (a, b) => Number(a.num_reviews) - Number(b.num_reviews) ).reverse() : 
-      places?.sort( (a, b) => Number(a.rating) - Number(b.rating) ).reverse();
+    (sortby === 'sort-by-popularity') ? places?.sort( (a, b) => Number(a.num_reviews) - Number(b.num_reviews) ).reverse() 
+      : places?.sort( (a, b) => Number(a.rating) - Number(b.rating) ).reverse();
+      setChildClicked('');
     }, [places, sortby]
   );
 
