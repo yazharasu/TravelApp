@@ -1,5 +1,5 @@
-import react, { useEffect, useState } from 'react'
-import { CssBaseline, Grid } from '@material-ui/core'
+import { useEffect, useState } from 'react';
+import { CssBaseline, Grid } from '@material-ui/core';
 import Header from './Components/Header/Header';
 import List from './Components/List/List';
 import Map from './Components/Map/Map';
@@ -7,7 +7,6 @@ import PlaceDetails from './Components/PlaceDetails/PlaceDetails';
 import { getPlacesData } from './api';
 
 function App() {
-
   const [places, setPlaces] = useState( [ ] );
   const [coordinates, setCoordinates] = useState({ });
   const [bounds, setBounds] = useState( {} );

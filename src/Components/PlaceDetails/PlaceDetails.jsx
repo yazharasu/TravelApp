@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import useStyles from './styles';
 import { Box, Typography, Button, Card, CardMedia, CardContent, CardActions, Chip} from "@material-ui/core";
 import LocationOnIcon from '@material-ui/icons/LocationOn';

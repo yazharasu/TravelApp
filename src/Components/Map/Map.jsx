@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Paper, Typography, useMediaQuery } from '@material-ui/core';
 import LocationonOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import Rating from '@material-ui/lab/Rating';

@@ -1,6 +1,4 @@
 import axios from 'axios';
-import PlaceDetails from '../Components/PlaceDetails/PlaceDetails';
-
 
 export const getPlacesData = async (type, sw, ne) => {
     try {
