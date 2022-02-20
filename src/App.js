@@ -3,7 +3,6 @@ import { CssBaseline, Grid } from '@material-ui/core';
 import Header from './Components/Header/Header';
 import List from './Components/List/List';
 import Map from './Components/Map/Map';
-import PlaceDetails from './Components/PlaceDetails/PlaceDetails';
 import { getPlacesData } from './api';
 
 function App() {
@@ -29,7 +28,6 @@ function App() {
         .then( (data) => {
           setPlaces( data?.filter( (place) => place.name && place.num_reviews >0 )); 
           setIsLoading(false);
-          console.log(places)
         })
       
     }, [coordinates, bounds, type]
